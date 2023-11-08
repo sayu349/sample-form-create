@@ -1,4 +1,5 @@
 flask
 Pillow
+wtforms
 pandas
 google-cloud-storage

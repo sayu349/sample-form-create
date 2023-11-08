@@ -1,4 +1,4 @@
 ## 目的
-- Flaskを使って、アプリケーションの作成について学ぶ
 - wtformsを使ったお問い合わせフォームの作成について学ぶ
-- AppEngineへのコードデプロイ
+- AppEngineへのCloudBuildを活用したCI/CDの構築
+- VScode・GitHub・GCPの3つを連携した開発体制に慣れる

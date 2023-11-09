@@ -4,4 +4,4 @@
 - VScode・GitHub・GCPの3つを連携した開発体制に慣れる
 
 # 完成イメージ
-![success-image](https://raw.githubusercontent.com/sayu349/sample-form-create/tree/main/static/images/sample-form-create.png)
+![success-image](https://github.com/sayu349/sample-form-create/tree/main/static/images/sample-form-create.png)

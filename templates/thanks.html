@@ -1,10 +1,20 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <title>終了</title>
-</head>
-<body>
-    <p>ご協力ありがとうございました。</p>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}
+    <h1>入力が完了しました</h1>
+    <p>※：このお問い合わせフォームは、サンプルです。</p>
+{% endblock %}
+
+{% block content %}
+    <ul>
+        <li>お名前：{{ form.name.data }}</li>
+        <li>年齢：{{ form.company.data }}</li>
+        <li>お電話番号：{{ form.tel.data }}</li>
+        <li>メールアドレス：{{ form.email.data }}</li>
+        <li>お問い合わせ概要：{{ form.inquiry.data }}</li>
+        <li>お問い合わせ内容：{{ form.note.data }}</li>
+    </ul>
+    <p id="return-button">
+        <a href="{{url_for('enter_form')}}">一つ戻る</a>
+    </p>
+{% endblock %}

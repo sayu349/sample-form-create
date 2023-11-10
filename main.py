@@ -45,12 +45,12 @@ def enter_form():
             client = storage.Client()
             bucket_name = "sample-form-404507.appspot.com"
             bucket = client.get_bucket(bucket_name)
-            blob_name = "sample-form-db/from.db"
+            blob_name = "sample-form-db/form.db"
             blob = bucket.blob(blob_name)
-            blob.download_to_filename('/tmp/from.db')
+            blob.download_to_filename('/tmp/form.db')
 
             # databaseにレコードを追加
-            con = sqlite3.connect('/tmp/from.db')
+            con = sqlite3.connect('/tmp/form.db')
             cur = con.cursor()
             cur.execute('INSERT INTO form (name, company, tel, email, inquiry, note) VALUES (?, ?, ?, ?, ?, ?)',
                         (name, company, tel, email, inquiry, note))
@@ -61,9 +61,9 @@ def enter_form():
             client = storage.Client()
             bucket_name = "sample-form-404507.appspot.com"
             bucket = client.get_bucket(bucket_name)
-            blob_name = "sample-form-db/from.db"
+            blob_name = "sample-form-db/form.db"
             blob = bucket.blob(blob_name)
-            blob.upload_from_filename('/tmp/from.db')
+            blob.upload_from_filename('/tmp/form.db')
 
             return render_template("thanks.html",form = form)
 

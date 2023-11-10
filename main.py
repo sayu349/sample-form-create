@@ -36,7 +36,8 @@ def enter_form():
     # GET:フォーム送信前
     else:
         return render_template("index.html",form=form)
-
+"""
 # デバック時に使う
 if __name__== '__main__':
     app.run(debug=True)
+"""

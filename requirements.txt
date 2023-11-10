@@ -3,3 +3,4 @@ Pillow
 wtforms
 pandas
 google-cloud-storage
+gunicorn

@@ -65,6 +65,8 @@ def enter_form():
             blob = bucket.blob(blob_name)
             blob.upload_from_filename('/tmp/from.db')
 
+            return render_template("thanks.html",form = form)
+
         else:
             # ローカル環境の場合
             # databaseにレコードを追加

@@ -21,4 +21,4 @@
 
 # 完成イメージ
 - 殆ど以下のフレームワークで作成しているハズ…。ご参考までに。
-    - ![sample-form-create](https://github.com/sayu349/sample-form-create/assets/106569098/7c9ec1f0-a30a-43c6-8b2e-67594579f078)
+    ![sample-form-create](https://github.com/sayu349/sample-form-create/assets/106569098/7c9ec1f0-a30a-43c6-8b2e-67594579f078)

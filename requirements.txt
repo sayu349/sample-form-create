@@ -1,5 +1,4 @@
 flask
 Pillow
 wtforms
-sqlite3
 google-cloud-storage

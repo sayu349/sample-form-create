@@ -5,16 +5,15 @@
 {% endblock %}
 
 {% block content %}
-    <form method="POST">
-        {{ form.name.label }}{{ form.name(size=20) }}<br>
-        {{ form.age.label }}{{ form.age() }}<br>
-        {{ form.password.label }}{{ form.password(size=20) }}<br>
-        {{ form.confirm_password.label }}{{ form.confirm_password(size=20) }}<br>
-        {{ form.email.label }}{{ form.email(placeholder="xxxx@example.com") }}<br>
-        {{ form.birthday.label }}{{ form.birthday() }}<br>
-        {{ form.gender.label }}{{ form.gender() }}<br>
-        {{ form.area.label }}{{ form.area() }}<br>
-        {{ form.is_married.label }}{{ form.is_married() }}<br>
-        {{ form.note.label }}{{ form.note(style="height:100px; width:150px;") }}
+    <form method="POST" enctype="multipar">
+        {{ form.name.label }}{{ form.name() }}
+        {{ form.company.label }}{{ form.company() }}
+        {{ form.tel.label }}{{ form.tel() }}
+        {{ form.email.label }}{{ form.email() }}
+        {{ form.confirm_email.label }}{{ form.confirm_email() }}
+        {{ form.gender.label }}{{ form.gender() }}
+        {{ form.note.label }}{{ form.note(style="height:100px; width:100%;") }}
+        {{ form.privacy.label }}{{ form.privacy() }}
+        {{ form.submit() }}
     </form>
 {% endblock %}

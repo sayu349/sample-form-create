@@ -1,31 +1,34 @@
 from wtforms import Form
 
 from wtforms.fields import (
-    StringField, IntegerField, PasswordField, DateField,
-    RadioField, SelectField, BooleanField, TextAreaField,
-    EmailField, SubmitField
+    StringField, PasswordField, DateField,
+    SelectField, BooleanField, TextAreaField,
+    SubmitField
 )
+# python3.11以上の場合
+from wtforms.fields.html5 import EmailField
+# python 3.11未満の場合
+# from wtforms.fields import EmailField
+
+from wtforms.validators import DataRequired
+
 
 class UserInfoForm(Form):
     # 名前：文字列入力
-    name = StringField("名前：", render_kw={"placeholder":"(例)山田 太郎"})
+    name = StringField("お名前", render_kw={"placeholder":"(例)山田 太郎"})
     # 年齢：静数値入力
-    age = IntegerField("年齢：", default=20)
-    # パスワード：パスワード入力
-    password = PasswordField("パスワード：")
-    # 確認用：パスワード入力
-    confirm_password = PasswordField("パスワード確認：")
-    # Email:メールアドレス
-    email = EmailField("メールアドレス：")
-    # 生年月日：日付入力
-    birthday = DateField("生年月日：", format="%Y-%m-%d", render_kw={"placeholder":"yyyy/mm/dd"})
-    # 性別：ラジオボタン
-    gender = RadioField("性別：", choices=[("man", "男性"),("women", "女性")], default="man")
-    # 出身地域：セレクトボックス
-    area = SelectField("出身地域：", choices=[("east","東日本"),("west","西日本")])
-    # 既婚：真偽値入力
-    is_married = BooleanField("既婚？：")
-    # メッセージ：複数行テキスト
-    note = TextAreaField("備考：")
+    company = StringField("会社名", render_kw={"placeholder":"〇〇〇〇株式会社"})
+    # お電話番号：文字列入力
+    tel = StringField("お電話番号",render_kw={"placeholder":"012-3456-7890"})
+    # メールアドレス：メールアドレス入力
+    email = EmailField("メールアドレス", render_kw={"placeholder":"xxxx@example.com"})
+    # メールアドレス(確認用)：メールアドレス入力
+    confirm_email = EmailField("メールアドレス確認", render_kw={"placeholder":"xxxx@example.com"})
+    # お問い合わせ概要：セレクトボックス
+    inquiry = SelectField("お問い合わせ概要", choices=[("seminar", "セミナー・講演のご依頼"),("consultant", "相談・コンサルティングのご依頼"),("others","その他")])
+    # お問い合わせ内容：テキストボックス
+    note = TextAreaField("お問い合わせ内容")
+    # 同意：真偽値入力
+    privacy = BooleanField("プライバシーポリシーに同意する", validators=[DataRequired()])
     # ボタン
     submit = SubmitField("送信")
